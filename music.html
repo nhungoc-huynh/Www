@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phùng Khánh Linh | Music</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --citopia-pink: #ff2e63;
+            --yesteryear-purple: #6a0572;
+            --vannguoi-blue: #4e4eef;
+            --bg-dark: #0a0a12; 
+            --card-bg: rgba(26, 26, 46, 0.7);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: var(--bg-dark); color: #fff; line-height: 1.6; }
+
+        header {
+            height: 60vh;
+            /* Đảm bảo file header-bg.jpg nằm trong thư mục Images */
+            background: linear-gradient(to bottom, rgba(0,0,0,0.4), var(--bg-dark)), 
+                        url('Images/header-bg.jpg') center/cover no-repeat;
+            display: flex; align-items: center; justify-content: center;
+        }
+
+        header h1 {
+            font-size: clamp(3rem, 10vw, 6rem);
+            letter-spacing: 12px;
+            background: linear-gradient(45deg, #fff, var(--citopia-pink));
+            /* ĐÃ FIX LỖI LINE 39: Thêm thuộc tính tiêu chuẩn */
+            -webkit-background-clip: text;
+            background-clip: text; 
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+        }
+
+        .container { max-width: 900px; margin: -100px auto 50px; padding: 0 20px; }
+
+        .album-section {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            padding: 30px; border-radius: 20px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255,255,255,0.1);
+            display: flex; gap: 30px; flex-wrap: wrap;
+        }
+
+        .album-cover { width: 220px; height: 220px; border-radius: 12px; object-fit: cover; }
+        .album-details { flex: 1; min-width: 300px; }
+
+        .btn {
+            margin-top: 20px; padding: 12px 25px; border-radius: 50px;
+            text-decoration: none; font-weight: bold; color: #fff;
+            display: inline-flex; align-items: center; gap: 8px; transition: 0.3s;
+        }
+
+        .theme-vannguoi .btn { background: var(--vannguoi-blue); }
+        .theme-citopia .btn { background: var(--citopia-pink); }
+        .theme-yesteryear .btn { background: var(--yesteryear-purple); }
+
+        footer { text-align: center; padding: 40px; opacity: 0.5; }
+    </style>
+</head>
+<body>
+    <header><h1>PHÙNG KHÁNH LINH</h1></header>
+
+    <div class="container">
+        <section class="album-section theme-vannguoi">
+            <img src="Images/van-nguoi.jpg" class="album-cover" alt="Bìa Album">
+            <div class="album-details">
+                <h2>GIỮA MỘT VẠN NGƯỜI</h2>
+                <p>Studio Album 03 (2024)</p>
+                <a href="https://www.youtube.com/watch?v=nZDTmX3iHI8" target="_blank" class="btn">
+                    <i class="fab fa-youtube"></i> Nghe trên YouTube
+                </a>
+            </div>
+        </section>
+
+        <section class="album-section theme-citopia">
+            <img src="Images/citopia.jpg" class="album-cover" alt="Bìa Album">
+            <div class="album-details">
+                <h2>CITOPIA</h2>
+                <p>Studio Album 02 (2022)</p>
+                <a href="https://www.youtube.com/watch?v=z6v4A1E7qH4" target="_blank" class="btn">
+                    <i class="fab fa-youtube"></i> Nghe trên YouTube
+                </a>
+            </div>
+        </section>
+
+        <section class="album-section theme-yesteryear">
+            <img src="Images/yesteryear.jpg" class="album-cover" alt="Bìa Album">
+            <div class="album-details">
+                <h2>YESTERYEAR</h2>
+                <p>The Debut Album (2020)</p>
+                <a href="https://www.youtube.com/watch?v=sLjtE_aDkA8" target="_blank" class="btn">
+                    <i class="fab fa-youtube"></i> Nghe trên YouTube
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <footer><p>&copy; 2026 PHÙNG KHÁNH LINH</p></footer>
+</body>
+</html>
